@@ -1,0 +1,75 @@
+local plr = game.Players.LocalPlayer
+repeat wait() until plr.Character
+local char = plr.Character
+
+local garbage = {
+    "aim";
+    "ur buns";
+    "ez";
+    "my grandma has more skill than you";
+    "trash";
+    "LOL";
+    "imagine being you right now";
+    "xd";
+    "its not hard to aim train";
+    "you lost";
+    "could never be me";
+    "why do you even try";
+    "i didnt think being this bad was possible";
+    "leave";
+    "no skill";
+    "ahahahaha";
+    "bad";
+    "youre nothing";
+    "mic up budster";
+    "so trash";
+    "so bad";
+    "ur salty";
+    "ur slower than firefox";
+    "look he's mad";
+    "cry more";
+    "get good kiddo";
+    "keep crying";
+    "cry baby";
+    "hahaha i won";
+    "lame";
+    "darn";
+    "ez bounty";
+    "you almost had me";
+    "get better tbh";
+    "glhf";
+    "roach";
+    "u stink";
+    "LOLZIES";
+    "bros aim is horrendous";
+    "go play adopt me";
+    "ya eyes dont work right";
+    "corn";
+    "how do you miss those shots";
+    "did you get worse?";
+    "why havent you left?";
+    "leave the game";
+    "bro needs help"
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function TrashTalk(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.J and gameProcessedEvent == false then        
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+        garbage[math.random(1,#garbage)],
+        "All"
+    )
+    end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(TrashTalk)
